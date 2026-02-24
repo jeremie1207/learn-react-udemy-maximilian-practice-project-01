@@ -1,18 +1,26 @@
-export default function Result() {
-    return <table id="result">
-        <thead>
-            <tr>
-                <th>Year</th>
-                <th>Investment Value</th>
-                <th>Interest (Year)</th>
-                <th>Total Interest</th>
-                <th>Invested Capital</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+export default function Result({ result }) {
+    return (
+        <table id="result">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Investment Value</th>
+                    <th>Interest (Year)</th>
+                    <th>Total Interest</th>
+                    <th>Invested Capital</th>
+                </tr>
+            </thead>
+            <tbody>
+                {result.map(i => (
+                    <tr key={i.year}>
+                        <td>{i.year}</td>
+                        <td>{i.valueEndOfYear}</td>
+                        <td>{i.interest}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
 }
