@@ -1,23 +1,5 @@
-import { useState } from "react";
 
-export default function UserInput(){
-
-    const [formData, setFormData] = useState({
-        initialInvestment:"",
-        annualInvestment:"",
-        expectedReturn:"", 
-        duration:""
-    });
-
-
-    function handleChange(event) {
-        const {name, value} = event.target;
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            [name]: value
-        }));
-    }
-
+export default function UserInput({formData, handleChange}){
 
     return <form action="" id="user-input">
         <div className="input-group">
