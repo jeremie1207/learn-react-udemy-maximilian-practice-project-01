@@ -16,8 +16,8 @@ export default function Result({ result }) {
                         <td>{i.year}</td>
                         <td>{i.valueEndOfYear}</td>
                         <td>{i.interest}</td>
-                        <td></td>
-                        <td></td>
+                        <td>{i.totalInterest}</td>
+                        <td>{i.investedCapital}</td>
                     </tr>
                 ))}
             </tbody>
