@@ -16,6 +16,8 @@ export default function UserInput({formData, handleChange}){
                     id="initial_investment"
                     value={formatFalsyValue(formData.initialInvestment)}
                     onChange={handleChange}
+                    required
+                    aria-required='true'
                     />
             </div>
             <div>
@@ -25,7 +27,9 @@ export default function UserInput({formData, handleChange}){
                     name="annualInvestment" 
                     id="annual_investment" 
                     value={formatFalsyValue(formData.annualInvestment)} 
-                    onChange={handleChange}/>
+                    onChange={handleChange}
+                    required
+                    aria-required='true'/>
             </div>
         </div>
 
@@ -37,7 +41,9 @@ export default function UserInput({formData, handleChange}){
                     name="expectedReturn" 
                     id="expected_return" 
                     value={formatFalsyValue(formData.expectedReturn)} 
-                    onChange={handleChange}/>
+                    onChange={handleChange}
+                    required
+                    aria-required='true'/>
             </div>
             <div>
                 <label htmlFor="duration">Duration</label>
@@ -46,7 +52,9 @@ export default function UserInput({formData, handleChange}){
                     name="duration" 
                     id="duration" 
                     value={formatFalsyValue(formData.duration)} 
-                    onChange={handleChange}/>
+                    onChange={handleChange}
+                    required
+                    aria-required='true'/>
             </div>
         </div>
     </form>
