@@ -22,10 +22,23 @@ function App() {
                 ...prev,
                 [name]: +value
             };
+
+            let compilable = true;
             
-            console.log(calculateInvestmentResults(updated));
-            const investmentData = calculateInvestmentResults(updated);
-            setResult(transformAnnualData(investmentData));
+            for(let value in updated) {
+              if(!updated[value]) {
+                compilable = false;
+              }
+            }
+
+            if(compilable) {
+              const investmentData = calculateInvestmentResults(updated);
+              setResult(transformAnnualData(investmentData));
+            }else {
+              setResult([]);
+            }
+
+            
             return updated;
         });
     }
