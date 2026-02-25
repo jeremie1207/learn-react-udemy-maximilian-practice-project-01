@@ -1,3 +1,8 @@
+function formatFalsyValue(value) {
+    if(!value) return '';
+    return value;
+}
+
 
 export default function UserInput({formData, handleChange}){
 
@@ -9,7 +14,7 @@ export default function UserInput({formData, handleChange}){
                     type="number" 
                     name="initialInvestment" 
                     id="initial_investment"
-                    value={formData.initialInvestment}
+                    value={formatFalsyValue(formData.initialInvestment)}
                     onChange={handleChange}
                     />
             </div>
@@ -19,7 +24,7 @@ export default function UserInput({formData, handleChange}){
                     type="number" 
                     name="annualInvestment" 
                     id="annual_investment" 
-                    value={formData.annualInvestment} 
+                    value={formatFalsyValue(formData.annualInvestment)} 
                     onChange={handleChange}/>
             </div>
         </div>
@@ -31,7 +36,7 @@ export default function UserInput({formData, handleChange}){
                     type="number" 
                     name="expectedReturn" 
                     id="expected_return" 
-                    value={formData.expectedReturn} 
+                    value={formatFalsyValue(formData.expectedReturn)} 
                     onChange={handleChange}/>
             </div>
             <div>
@@ -40,7 +45,7 @@ export default function UserInput({formData, handleChange}){
                     type="number" 
                     name="duration" 
                     id="duration" 
-                    value={formData.duration} 
+                    value={formatFalsyValue(formData.duration)} 
                     onChange={handleChange}/>
             </div>
         </div>
